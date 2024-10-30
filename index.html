@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- CSS FILE -->
+     <link rel="stylesheet" href="style.css">
+     <!-- JS FILE -->
+      <script src="script.js" defer ></script>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="calc-wrapper">
+
+            <!-- start screen -->
+
+            <div class="screen-wrapper">
+                <div class="screen user-input">
+                    <input type="text" name="display" id="input" readonly >
+                </div>
+
+                <div class="screen user-output">
+                    <input type="text" name="output" id="output" readonly>
+                </div>
+
+            </div>
+            <!-- end screen -->
+
+            <!-- start buttons -->
+            <div class="button-wrapper">
+
+             <div class="button one">
+                <input type="button" class="red" value="C" onclick="clearFields()">
+                <input type="button" class="red" value="DEL" onclick="del()">
+                <input type="button" class="green" value="%" onclick="input.value += '%' " >
+                <input type="button" class="green" value="/" onclick="input.value += '/' " >
+             </div>
+             <div class="button two">
+                <input type="button" value="7" onclick="input.value += '7' " >
+                <input type="button" value="8" onclick="input.value += '8' " >
+                <input type="button" value="9" onclick="input.value += '9' " >
+                <input type="button" class="green" value="*" onclick="input.value += '*' " >
+             </div>
+             <div class="button three">
+                <input type="button" value="4" onclick="input.value += '4' " >
+                <input type="button" value="5" onclick="input.value += '5' " >
+                <input type="button" value="6" onclick="input.value += '6' " >
+                <input type="button" class="green" value="-" onclick="input.value += '-' " >
+             </div>
+             <div class="button four">
+                <input type="button" value="1" onclick="input.value += '1' " >
+                <input type="button" value="2" onclick="input.value += '2' " >
+                <input type="button" value="3" onclick="input.value += '3' " >
+                <input type="button" class="green" value="+" onclick="input.value += '+' " >
+             </div>
+             <div class="button three">
+                <input type="button" value="00" onclick="input.value += '00' " >
+                <input type="button" value="0" onclick="input.value += '0' " >
+                <input type="button" class="green" value="." onclick="input.value += '.' " >
+                <input type="button" class="green" value="=" onclick="output.value = eval(input.value)" >
+             </div>
+                
+            </div>
+
+           
+        </div>
+    </div>
+    
+</body>
+</html>
